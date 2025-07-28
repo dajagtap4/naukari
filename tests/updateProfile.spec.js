@@ -31,7 +31,7 @@ for(const cred of credSet)
 
     // Correct relative path
     const filePath = path.resolve(__dirname, '../resume/QA_DeepakJ_Resume.pdf');
-
+    
     // Listen for file chooser event
     const [fileChooser] = await Promise.all([
       page.waitForEvent('filechooser'),
