@@ -8,7 +8,7 @@ on:
   
   # 🔁 ✅ ADDED: schedule block for daily 8:30 AM UTC
   schedule:
-    - cron: '30 8 * * *'  # Runs every day at 08:30 UTC
+    - cron: '0 3 * * *'  # Runs every day at 08:30 UTC
   
   # ✅ OPTIONAL: allow manual run from GitHub UI
   workflow_dispatch:
