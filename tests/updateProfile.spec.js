@@ -107,5 +107,43 @@ for (const cred of credSet) {
 
     });
 
+    test(`TC : 003 - share interest`, async ({ page }) => {
+
+      test.setTimeout(100000);
+
+      if(await page.locator("#s2j-ear-component>div>div+a").isVisible()) {
+        await page.locator("#s2j-ear-component>div>div+a").click();
+        await page.locator('.unshared').first().click();
+        await page.waitForTimeout(1000);
+      }else {
+        console.log("🔔 Heads up: No early access roles available for you right now. Stay tuned!");
+        return;
+      }
+
+      const buttons  = page.locator('article');
+      const count = await buttons.count();
+      console.log(`🔎 TC:003 - Total articles found: ${count}`);
+
+      await page.waitForTimeout(1000);
+      if (count === 0) {
+        console.log(`📝 TC:003 - No articles found to 'share interest-1'`);
+        return;
+      } 
+
+      let clickCount = 0;
+
+      for(let i = 0; i < count; i++) {
+        const button_text = await buttons.nth(i).locator('>div:last-child>div:last-child>button').textContent();
+        if (button_text === 'Share Interest') {
+          await buttons.nth(i).locator('>div:last-child>div:last-child>button').click();
+          await page.waitForTimeout(500);
+          clickCount++;
+        }else {
+          console.log(`📝 TC:003 - No 'Share Interest' button found-2.`);
+        }
+      } 
+      console.log(`✅ TC:003 - Total 'Share Interest' buttons clicked: ${clickCount}`);
+    });
+
   });
 }
