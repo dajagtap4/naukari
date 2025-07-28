@@ -33,7 +33,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: false,
     launchOptions: {
-      slowMo: 300,             // 👈 Slow down each action by 300ms
+      slowMo: 1000,             // 👈 Slow down each action by 300ms
     },
   },
 

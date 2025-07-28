@@ -72,7 +72,7 @@ for (const cred of credSet) {
       // verify resume uploaded
       const message = page.locator('text=Resume has been successfully uploaded.');
       await expect(message).toBeVisible();
-      console.log(`📝 Resume updated for < ${cred.accName} > account`);
+      console.log(`📝 TC:001 - Resume updated.`);
       
     });
 
@@ -93,7 +93,7 @@ for (const cred of credSet) {
       const today_text = page.locator('.subhdn>div>span>span');
       await expect(today_text).toBeVisible();
       await expect(today_text).toHaveText('Today');
-      console.log(`📝 Basic details updated.`);
+      console.log(`📝 TC:002 - Basic details updated.`);
       
 
 //✏️ Resume headline
@@ -102,7 +102,7 @@ for (const cred of credSet) {
       const message = page.locator('text=Resume Headline has been successfully saved.');
       await expect(message).toBeVisible();
       await expect(message).toHaveText('Resume Headline has been successfully saved.');
-      console.log(`📝 Resume headline updated.`);
+      console.log(`📝 TC:002 - Resume headline updated.`);
       
 
     });
