@@ -22,13 +22,6 @@ for(const cred of credSet)
     await page.waitForURL('https://www.naukri.com/mnjuser/homepage', { timeout: 10000 });
     expect(page.url()).toContain("https://www.naukri.com/mnjuser/homepage");
 
-  //   await page.waitForURL('https://www.naukri.com/mnjuser/homepage', {
-  //   timeout: 30000, // ⬆️ increased timeout
-  //   waitUntil: 'networkidle', // ⏳ wait until no network traffic
-  // });
-
-  //   expect(page.url()).toContain("naukri.com/mnjuser/homepage");
-
     // navigate to profile
     await page.locator("img[alt='naukri user profile img']").click();
     //await page.waitForLoadState('networkidle');
