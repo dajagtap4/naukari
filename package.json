@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "naukari": "npx playwright test ./tests/naukari/uploadResume.spec.js --project=chromium"
+    "naukari": "npx playwright test ./tests/uploadResume.spec.js --project=chromium"
   },
   "repository": {
     "type": "git",
