@@ -58,7 +58,7 @@ for (const cred of credSet) {
       // await page.waitForLoadState('networkidle');
 
       // relative path
-      const filePath = path.resolve(__dirname, '../resume/QA_DeepakJ_Resume.pdf');
+      const filePath = path.resolve(__dirname, '../resume/DeepakQA.pdf');
 
       // Listen for file chooser event
       const [fileChooser] = await Promise.all([
