@@ -1,8 +1,7 @@
-// @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  timeout: 60000, // 60 sec per test
+  timeout: 60000, // if not added then by default its 30seconds.
   testDir: './tests',
   fullyParallel: true,
   reporter: 'html',
